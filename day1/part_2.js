@@ -5,7 +5,8 @@ console.log(
     .map((element) => element.split("\r\n")
     .reduce((accumulator, element) => accumulator + Number(element), 0))
     .sort((x, y) => (y - x))
-    .slice(0,3).reduce((accumulator, element) => accumulator + Number(element), 0)
+    .slice(0,3)
+    .reduce((accumulator, element) => accumulator + Number(element), 0)
 );
 
 
