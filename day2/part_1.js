@@ -19,7 +19,7 @@ const eval = {
 };
 
 let score = 0;
-fs.readFileSync("input_1.txt", "utf-8").split("\r\n").map((element) => {
+fs.readFileSync("input.txt", "utf-8").split("\r\n").map((element) => {
     const [a, b] = element.split(" ");
     score += value[b];
     score += eval[a][b];
