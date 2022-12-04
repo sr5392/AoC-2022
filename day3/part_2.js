@@ -4,17 +4,17 @@ const input = fs.readFileSync("input.txt", "utf-8").split("\r\n");
 
 let priorities = 0;
 for(let i = 0; i < input.length; i += 3){
-    const groups = input.slice(i, i+3);
+    const group = input.slice(i, i+3);
 
-    const group1 = groups[0].split("");
-    const group2 = groups[1].split("");
-    const group3 = groups[2].split("");
+    const backpack1 = group[0].split("");
+    const backpack2 = group[1].split("");
+    const backpack3 = group[2].split("");
 
-    const items = new Set(group1.filter(element => group2.indexOf(element) != -1));
+    const items = new Set(backpack1.filter(element => backpack2.indexOf(element) != -1));
    
     let item;
     for(const element of items){
-        if(group3.indexOf(element) != -1){
+        if(backpack3.indexOf(element) != -1){
             item = element;
             break;
         }
