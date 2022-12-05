@@ -1,7 +1,7 @@
 const fs = require("fs");
 
 let count = 0;
-const input = fs.readFileSync("input.txt", "utf-8").split("\r\n").forEach((element) => {
+fs.readFileSync("input.txt", "utf-8").split("\r\n").forEach((element) => {
     const group = element;
     const [sections1, sections2] = group.split(",");
 
